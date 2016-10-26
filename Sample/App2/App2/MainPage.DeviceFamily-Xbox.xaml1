@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--DEMO 2.4 Family specific views-->
+    <StackPanel Orientation="Vertical" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock>Hello Microsoft Ignite 2016!</TextBlock>
+        <TextBlock>This is the Xbox View</TextBlock>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="10">Data provided by Marvel. © 2014 Marvel - http://developer.marvel.com/</TextBlock>
+    
+        <GridView x:Name="gridView" SelectionMode="None" Margin="0,40,0,0">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Image Height="220" MaxWidth="150" Margin="10" Source="{Binding ImageSource}" Stretch="UniformToFill" AutomationProperties.Name="{Binding AutomationImageName}"/>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </StackPanel>
+</Page>

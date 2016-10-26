@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{2EE7D007-2E2A-4987-8BDA-6D84E5905233}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App2</RootNamespace>
+    <AssemblyName>App2</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>App2_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="Assets\comics.json" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComicData.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Platform.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="App2_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\thumbnails\4fe8cb51f32e0.jpg" />
+    <Content Include="Assets\thumbnails\502912f2a8809.jpg" />
+    <Content Include="Assets\thumbnails\5127c646dc39a.jpg" />
+    <Content Include="Assets\thumbnails\517aab576d132.jpg" />
+    <Content Include="Assets\thumbnails\54d38a627e7ae.jpg" />
+    <Content Include="Assets\thumbnails\5575ed74293fc.jpg" />
+    <Content Include="Assets\thumbnails\55786adc0074d.jpg" />
+    <Content Include="Assets\thumbnails\558ae0c40c269.jpg" />
+    <Content Include="Assets\thumbnails\559179916a000.jpg" />
+    <Content Include="Assets\thumbnails\55940417dcb5c.jpg" />
+    <Content Include="Assets\thumbnails\559d464a94c7f.jpg" />
+    <Content Include="Assets\thumbnails\559d6c882f535.jpg" />
+    <Content Include="Assets\thumbnails\55a406e5c9722.jpg" />
+    <Content Include="Assets\thumbnails\55cca22294d68.jpg" />
+    <Content Include="Assets\thumbnails\55d22bcf906d3.jpg" />
+    <Content Include="Assets\thumbnails\55d23999c0bbc.jpg" />
+    <Content Include="Assets\thumbnails\55d23f7878fb6.jpg" />
+    <Content Include="Assets\thumbnails\55d34a42b4482.jpg" />
+    <Content Include="Assets\thumbnails\55d394f044452.jpg" />
+    <Content Include="Assets\thumbnails\55d47d5bdafb8.jpg" />
+    <Content Include="Assets\thumbnails\55d4c140ee29d.jpg" />
+    <Content Include="Assets\thumbnails\55d6339659631.jpg" />
+    <Content Include="Assets\thumbnails\55d6500b2e73c.jpg" />
+    <Content Include="Assets\thumbnails\55d736022bd09.jpg" />
+    <Content Include="Assets\thumbnails\55e4a9193bf50.jpg" />
+    <Content Include="Assets\thumbnails\55e6ffac51996.jpg" />
+    <Content Include="Assets\thumbnails\55e89d9bac7ee.jpg" />
+    <Content Include="Assets\thumbnails\55ef3bb7d126a.jpg" />
+    <Content Include="Assets\thumbnails\55ef3efb5d1ef.jpg" />
+    <Content Include="Assets\thumbnails\55ef48bae2add.jpg" />
+    <Content Include="Assets\thumbnails\55ef4b597bb9d.jpg" />
+    <Content Include="Assets\thumbnails\55f036566b565.jpg" />
+    <Content Include="Assets\thumbnails\55f039366bb2f.jpg" />
+    <Content Include="Assets\thumbnails\55f03ede7143e.jpg" />
+    <Content Include="Assets\thumbnails\55f04fe783ed1.jpg" />
+    <Content Include="Assets\thumbnails\55f0657cb8ecc.jpg" />
+    <Content Include="Assets\thumbnails\55f068f6b2d95.jpg" />
+    <Content Include="Assets\thumbnails\55f09e9470c29.jpg" />
+    <Content Include="Assets\thumbnails\55f09feb3bb6e.jpg" />
+    <Content Include="Assets\thumbnails\55f0a04f68f5b.jpg" />
+    <Content Include="Assets\thumbnails\55f0a1836cc61.jpg" />
+    <Content Include="Assets\thumbnails\55f6f4d7797cf.jpg" />
+    <Content Include="Assets\thumbnails\55f6fbeeec959.jpg" />
+    <Content Include="Assets\thumbnails\55f7025e1c6c2.jpg" />
+    <Content Include="Assets\thumbnails\55f70e5ecbe02.jpg" />
+    <Content Include="Assets\thumbnails\55f71077c8890.jpg" />
+    <Content Include="Assets\thumbnails\55f714c9967b3.jpg" />
+    <Content Include="Assets\thumbnails\55f718d34fb34.jpg" />
+    <Content Include="Assets\thumbnails\55f71d39b5ba7.jpg" />
+    <Content Include="Assets\thumbnails\55f7204cb5d00.jpg" />
+    <Content Include="Assets\thumbnails\55f82a1509128.jpg" />
+    <Content Include="Assets\thumbnails\55f82b55dafa3.jpg" />
+    <Content Include="Assets\thumbnails\55f84faa7702c.jpg" />
+    <Content Include="Assets\thumbnails\55f8619e7f146.jpg" />
+    <Content Include="Assets\thumbnails\55f86463a81b0.jpg" />
+    <Content Include="Assets\thumbnails\55f8670c2699b.jpg" />
+    <Content Include="Assets\thumbnails\55f9c39848513.jpg" />
+    <Content Include="Assets\thumbnails\55f9c681a5adf.jpg" />
+    <Content Include="Assets\thumbnails\55f9d33c308f2.jpg" />
+    <Content Include="Assets\thumbnails\55f9d5786a278.jpg" />
+    <Content Include="Assets\thumbnails\55faed6243f73.jpg" />
+    <Content Include="Assets\thumbnails\55faf03b1666c.jpg" />
+    <Content Include="Assets\thumbnails\55faf8ab4145b.jpg" />
+    <Content Include="Assets\thumbnails\55fafb25b457f.jpg" />
+    <Content Include="Assets\thumbnails\55fb02b187d53.jpg" />
+    <Content Include="Assets\thumbnails\55fb062c10e31.jpg" />
+    <Content Include="Assets\thumbnails\55fb0de011adb.jpg" />
+    <Content Include="Assets\thumbnails\55fb11911ec3e.jpg" />
+    <Content Include="Assets\thumbnails\55fb29b4221f0.jpg" />
+    <Content Include="Assets\thumbnails\55fc1eebb94be.jpg" />
+    <Content Include="Assets\thumbnails\56017a4ed088d.jpg" />
+    <Content Include="Assets\thumbnails\56017ebb300fd.jpg" />
+    <Content Include="Assets\thumbnails\560182d034862.jpg" />
+    <Content Include="Assets\thumbnails\5601855c253f1.jpg" />
+    <Content Include="Assets\thumbnails\56018e2b604d1.jpg" />
+    <Content Include="Assets\thumbnails\56019395d3746.jpg" />
+    <Content Include="Assets\thumbnails\560198b076959.jpg" />
+    <Content Include="Assets\thumbnails\56019b6694c9d.jpg" />
+    <Content Include="Assets\thumbnails\56019ba95a678.jpg" />
+    <Content Include="Assets\thumbnails\56019daea50ba.jpg" />
+    <Content Include="Assets\thumbnails\5601a10b1db9a.jpg" />
+    <Content Include="Assets\thumbnails\5601adc553f1b.jpg" />
+    <Content Include="Assets\thumbnails\5602ae2fa1e1b.jpg" />
+    <Content Include="Assets\thumbnails\5603195067945.jpg" />
+    <Content Include="Assets\thumbnails\56057e19ed7e9.jpg" />
+    <Content Include="Assets\thumbnails\560580639e7b8.jpg" />
+    <Content Include="Assets\thumbnails\560585fe0f751.jpg" />
+    <Content Include="Assets\thumbnails\56058d3ca3a22.jpg" />
+    <Content Include="Assets\thumbnails\56058d83bee22.jpg" />
+    <Content Include="Assets\thumbnails\560593beed422.jpg" />
+    <Content Include="Assets\thumbnails\560596ef1e56d.jpg" />
+    <Content Include="Assets\thumbnails\5605999a2bffd.jpg" />
+    <Content Include="Assets\thumbnails\56059eba334fc.jpg" />
+    <Content Include="Assets\thumbnails\5605a132a7a2d.jpg" />
+    <Content Include="Assets\thumbnails\5605a1db4b9a5.jpg" />
+    <Content Include="Assets\thumbnails\image_not_available.jpg" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <None Include="MainPage.DeviceFamily-Xbox.xaml1">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TvSafeColours.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
